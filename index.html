@@ -108,16 +108,35 @@
       font-size:13px;
       color:#fff;
     }
-    .hero-right{
+
+    /* UPDATED HERO IMAGE STYLES BELOW */
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width:320px;
       text-align:center;
     }
-    .hero-right img{
-      width:100%;
-      border-radius:10px;
-      object-fit:cover;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-      border:1px solid rgba(255,255,255,0.03);
+    .hero-right img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 0 25px rgba(230,57,70,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: glowPulse 3s infinite ease-in-out;
+      object-fit: cover;
+      border: none;
+      background: #fff;
+      display: block;
+      margin: 0 auto;
+    }
+    .hero-right img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(230,57,70,0.85);
+    }
+    @keyframes glowPulse {
+      0%, 100% { box-shadow: 0 0 15px rgba(230,57,70,0.5); }
+      50% { box-shadow: 0 0 35px rgba(230,57,70,0.9); }
     }
 
     /* Category filter */
@@ -257,8 +276,7 @@
       </div>
 
       <div class="hero-right">
-        <!-- using the wrap image as hero visual -->
-        <img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/logo.png" alt="Exotic Bistro Bites Logo">
+        <img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/logo.jpg" alt="Exotic Bistro Bites Logo">
       </div>
     </section>
 
