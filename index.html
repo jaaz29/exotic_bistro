@@ -83,7 +83,23 @@
     .map{width:100%;height:280px;border:0;border-radius:10px;overflow:hidden;}
     footer{text-align:center;color:var(--muted);font-size:13px;margin-top:28px;}
 
-    @media(max-width:980px){.two-col{grid-template-columns:1fr}.hero{flex-direction:column;}.hero-right img{width:200px;height:200px;}}
+    .btns { display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
+    .btns a {
+      text-decoration:none;
+      padding:10px 16px;
+      background:var(--accent);
+      color:#fff;
+      border-radius:8px;
+      font-size:14px;
+      transition:all .3s ease;
+    }
+    .btns a:hover { background:#ff5555; transform:translateY(-2px); }
+
+    @media(max-width:980px){
+      .two-col{grid-template-columns:1fr}
+      .hero{flex-direction:column;}
+      .hero-right img{width:200px;height:200px;}
+    }
   </style>
 </head>
 <body>
@@ -131,29 +147,20 @@
       </div>
 
       <div class="grid" id="menuGrid">
-        <!-- Shawarma -->
         <div class="card" data-cat="shawarma"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/chicken%20regular.webp" alt="Classic Regular Chicken Shawarma"></div><div class="card-body"><h3>Classic Regular Chicken Shawarma</h3><p>Juiciest chicken chunks with cucumber salad</p><div class="price"><div class="pri">₹99</div><div class="tag">Shawarma</div></div></div></div>
-
         <div class="card" data-cat="shawarma"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/chicken%20special.webp" alt="Chicken Special Shawarma"></div><div class="card-body"><h3>Chicken Special Shawarma</h3><p>Loaded tender chicken in the softest rumali</p><div class="price"><div class="pri">₹119</div><div class="tag">Shawarma</div></div></div></div>
-
         <div class="card" data-cat="shawarma"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/chicken%20pav.webp" alt="Chicken Pav"></div><div class="card-body"><h3>Chicken Pav</h3><p>Softest pav bun loaded with spicy chicken</p><div class="price"><div class="pri">₹40</div><div class="tag">Shawarma</div></div></div></div>
-
         <div class="card" data-cat="shawarma"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/mutton%20regular.webp" alt="Mutton Regular Shawarma"></div><div class="card-body"><h3>Mutton Regular Shawarma</h3><p>Classic buff mutton shawarma</p><div class="price"><div class="pri">₹119</div><div class="tag">BUFF</div></div></div></div>
-
         <div class="card" data-cat="shawarma"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/mutton%20special.webp" alt="Mutton Special Shawarma"></div><div class="card-body"><h3>Mutton Special Shawarma</h3><p>Special marinated mutton, extra tender</p><div class="price"><div class="pri">₹139</div><div class="tag">BUFF</div></div></div></div>
 
-        <!-- Wraps -->
         <div class="card" data-cat="wraps"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/chicken%20wrap.webp" alt="Chicken Wrap"></div><div class="card-body"><h3>Chicken Wrap</h3><p>Crispest chicken with garlicky mayo</p><div class="price"><div class="pri">₹119</div><div class="tag">Wraps</div></div></div></div>
 
-        <!-- Combos -->
         <div class="card" data-cat="combos"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/wrap%20fries%20combo.jpg" alt="Wrap + Fries + Drink"></div><div class="card-body"><h3>Wrap + Fries + Drink</h3><p>Combo: 1 wrap, fries & cold drink</p><div class="price"><div class="pri">₹169</div><div class="tag">Combo</div></div></div></div>
 
-        <!-- Salads -->
-        <div class="card" data-cat="salads"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/salad.jpg" alt="Fresh Salad"></div><div class="card-body"><h3>Fresh Salad</h3><p>Seasonal salad bowl</p><div class="price"><div class="pri">₹69</div><div class="tag">Salads</div></div></div></div>
+        <div class="card" data-cat="salads"><div class="imgwrap"><img src="https://raw.githubusercontent.com/jaaz29/exotic_bistro/main/images/salad.jpg" alt="Chicken Salad"></div><div class="card-body"><h3>Chicken Salad</h3><p>Healthy grilled chicken with veggies and dressing</p><div class="price"><div class="pri">₹89</div><div class="tag">Salads</div></div></div></div>
       </div>
     </section>
 
-    <!-- 🏪 Location & Contact Section -->
     <section id="location" style="margin-top:40px;">
       <h2>Find Us</h2>
       <div class="two-col">
@@ -162,7 +169,10 @@
           <p>Near Haji Ali Masjid, beside Mastana Chicken Center,<br>Rodamestry Nagar A, Gajularamaram,<br>Hyderabad - 500055</p>
           <p><strong>Contact:</strong> +91 63041 72753</p>
           <p><strong>Timings:</strong> 2:00 PM – 1:00 AM (Daily)</p>
-          <p>Follow us for daily offers and updates!</p>
+          <div class="btns">
+            <a href="tel:+916304172753">📞 Call Now</a>
+            <a href="https://goo.gl/maps/YXU1bVQ3L2uFz4Mp6" target="_blank">📍 Get Directions</a>
+          </div>
         </div>
         <div class="panel">
           <h4>Find us on Map</h4>
